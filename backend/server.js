@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const chatRoutes = require("./routes/chatRoutes");
 
 dotenv.config();
 connectDB();
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/contact", contactRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.use((req, res) => {
   res

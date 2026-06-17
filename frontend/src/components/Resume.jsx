@@ -6,6 +6,7 @@ import {
   Briefcase,
   Award,
 } from "lucide-react";
+import resumePDF from "../assets/resume.pdf";
 
 const Resume = () => {
   return (
@@ -50,8 +51,8 @@ const Resume = () => {
         </p>
 
         <motion.a
-          href="/resume.pdf"
-          download
+          href={resumePDF}
+          download="Vijendra_Kumar_Resume.pdf"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-8 py-4 rounded-lg shadow-lg shadow-cyan-500/20 transition-colors duration-300"

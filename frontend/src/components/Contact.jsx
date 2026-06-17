@@ -240,9 +240,7 @@ const Contact = () => {
           <FaGithub size={20} />
         </a>
         <a
-          href="mailto:vijendra.nbj04@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:vijendra.nbj04@gmail.com?subject=Hello&body=I want to contact you"
           className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 border border-slate-700 hover:border-cyan-400 hover:text-cyan-400 transition-colors duration-300"
         >
           <MailIcon size={20} />

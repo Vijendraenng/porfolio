@@ -2,6 +2,8 @@ import { portfolioData } from "../data";
 import { motion } from "framer-motion";
 import { Download, Briefcase } from "lucide-react";
 
+import resumePDF from "../assets/resume.pdf";
+
 const Hero = () => {
   return (
     <section
@@ -27,8 +29,7 @@ const Hero = () => {
         </motion.span>
 
         <h2 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-          Hi, I'm{" "}
-          <span className="text-cyan-400">{portfolioData.name}</span>
+          Hi, I'm <span className="text-cyan-400">{portfolioData.name}</span>
         </h2>
 
         <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-200">
@@ -54,8 +55,8 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1Sw80Lizo8snDcb9rvoJYCKesGXL-socO/view?usp=drivesdk"
-            download
+            href={resumePDF}
+            download="Vijendra_Kumar_Resume.pdf"
             className="flex items-center gap-2 border border-slate-600 hover:border-cyan-400 hover:text-cyan-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
           >
             <Download size={18} />

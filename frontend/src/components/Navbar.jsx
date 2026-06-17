@@ -33,13 +33,15 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-5 py-4">
-        <motion.h1
-          whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold text-cyan-400 cursor-pointer"
-        >
-          Vijendra<span className="text-white">.</span>
-        </motion.h1>
-
+        <a
+        href="#home">
+          <motion.h1
+            whileHover={{ scale: 1.05 }}
+            className="text-2xl font-bold text-cyan-400 cursor-pointer"
+          >
+            Vijendra<span className="text-white">.</span>
+          </motion.h1>
+        </a>
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8">
           {navLinks.map((link) => (
