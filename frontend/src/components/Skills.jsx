@@ -8,6 +8,13 @@ const categoryIcons = {
   database: Database,
   tools: Wrench,
 };
+const skillBars = [
+  { name: "React", level: 85 },
+  { name: "Node.js", level: 80 },
+  { name: "MongoDB", level: 75 },
+  { name: "Tailwind CSS", level: 90 },
+  { name: "Express.js", level: 78 },
+];
 
 const categoryColors = {
   frontend: "from-blue-500 to-cyan-400",
@@ -46,25 +53,44 @@ const Skills = () => {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:border-slate-500 transition-all duration-300"
               >
-                <div
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center mb-4 shadow-md`}
-                >
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-
-                <h3 className="text-xl font-semibold mb-4 capitalize text-white">
-                  {category}
-                </h3>
-
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1.5 text-sm rounded-full bg-slate-700/70 text-gray-200 border border-slate-600 hover:bg-slate-600 hover:border-cyan-400 transition-colors duration-200 cursor-default"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                // Inside your Skills section add this below the cards:
+                <div className="mt-12">
+                  <h3 className="text-2xl font-bold mb-6 text-center">
+                    Proficiency <span className="text-cyan-400">Levels</span>
+                  </h3>
+                  <div className="space-y-4 max-w-2xl mx-auto">
+                    {skillBars.map((skill, index) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <div className="flex justify-between mb-1.5">
+                          <span className="text-gray-200 text-sm font-medium">
+                            {skill.name}
+                          </span>
+                          <span className="text-cyan-400 text-sm">
+                            {skill.level}%
+                          </span>
+                        </div>
+                        <div className="w-full bg-slate-700 rounded-full h-2">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 1,
+                              delay: index * 0.1,
+                              ease: "easeOut",
+                            }}
+                            className="h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
+                          />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             );

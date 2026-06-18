@@ -7,10 +7,13 @@ import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
+import { ThemeProvider } from "./context/ThemeContext";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <About />
@@ -21,7 +24,7 @@ function App() {
       <Footer />
       {/* Chatbot — renders floating on every page */}
       <Chatbot />
-    </>
+    </ThemeProvider>
   );
 }
 

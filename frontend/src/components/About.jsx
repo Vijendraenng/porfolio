@@ -29,7 +29,6 @@ const About = () => {
       >
         About <span className="text-cyan-400">Me</span>
       </motion.h2>
-
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -37,7 +36,6 @@ const About = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-10 rounded-full"
       />
-
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <motion.p
           initial={{ opacity: 0, x: -30 }}
@@ -75,6 +73,23 @@ const About = () => {
           ))}
         </div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-12 flex flex-wrap justify-center gap-4"
+      >
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=vijendraenng&show_icons=true&theme=transparent&hide_border=true&title_color=22d3ee&text_color=94a3b8&icon_color=22d3ee"
+          alt="GitHub Stats"
+          className="rounded-xl"
+        />
+        <img
+          src="https://github-readme-streak-stats.herokuapp.com/?user=vijendraenng&theme=transparent&hide_border=true&stroke=22d3ee&ring=22d3ee&fire=3b82f6&currStreakLabel=22d3ee"
+          alt="GitHub Streak"
+          className="rounded-xl"
+        />
+      </motion.div>
     </section>
   );
 };
