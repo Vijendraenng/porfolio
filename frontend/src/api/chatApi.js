@@ -1,6 +1,6 @@
 import { botContext } from "../data/chatbotContext";
 
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export const sendChatMessage = async (userMessage, chatHistory = []) => {
   try {
@@ -35,7 +35,7 @@ export const sendChatMessage = async (userMessage, chatHistory = []) => {
     console.log("📡 Response status:", response.status);
 
     if (!response.ok) {
-      const err = await response.json();
+      const err = await response.json().catch(() => ({}));
       throw new Error(err.message || "Server error");
     }
 
