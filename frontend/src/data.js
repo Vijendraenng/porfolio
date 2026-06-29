@@ -16,9 +16,9 @@ export const portfolioData = {
       "Bootstrap 🅱️",
     ],
 
-    backend: ["Node.js 🚀", "Express ⚡", "REST APIs 🔗"],
+    backend: ["Node.js 🚀", "Express ⚡", "REST APIs 🔗", "Socket.IO 🔌"],
 
-    database: ["MongoDB 🍃", "Mongoose 🧩"],
+    database: ["MongoDB 🍃", "Mongoose 🧩", "PostgreSQL 🐘"],
 
     tools: ["Git 🌳", "GitHub 🐙", "Postman 📮", "VS Code 💻"],
   },
@@ -27,33 +27,26 @@ export const portfolioData = {
     {
       title: "Prescripto",
       description:
-        "Doctor Appointment System with Razorpay, JWT Authentication and Cloudinary.",
+        "Built a Doctor Appointment System with secure JWT authentication, online payments using Razorpay, and image management through Cloudinary. The platform allows users to book appointments, manage profiles, and make seamless payments in real time.",
       tech: ["React ⚛️", "Node.js 🚀", "MongoDB 🍃", "JWT 🔐", "Razorpay 💳"],
       github:
         "https://github.com/Vijendraenng/Doctor-appointment-full-stack-app",
       live: "https://doctor-appointment-full-frontend.onrender.com",
     },
     {
-      title: "Employee Management System",
+      title: "Skribbl Clone",
       description:
-        "A complete HR solution to manage employees, attendance, salaries and departments with role-based access.",
-      tech: ["React ⚛️", "Node.js 🚀", "Express ⚡", "MongoDB 🍃", "JWT 🔐"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Expense Tracker",
-      description:
-        "A personal finance app to track income and expenses, visualize spending with charts, and manage budgets effectively.",
+        "Real-time multiplayer drawing and guessing game. Players draw words on a shared canvas while others guess in live chat. Features public rooms, invite links, speed-based scoring, progressive hints, and page-refresh reconnection.",
       tech: [
         "React ⚛️",
+        "TypeScript 🔷",
         "Node.js 🚀",
-        "Express ⚡",
-        "MongoDB 🍃",
-        "Chart.js 📊",
+        "Socket.IO 🔌",
+        "PostgreSQL 🐘",
+        "Tailwind 🌊",
       ],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Vijendraenng/skribbl.io-clone",
+      live: "https://skribbl-io-clone-px77.vercel.app/",
     },
   ],
 };
