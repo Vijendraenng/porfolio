@@ -41,8 +41,8 @@ PROJECTS:
    - Tech Stack: React, TypeScript, Vite, Tailwind CSS, Node.js, Express.js,
      Socket.IO, PostgreSQL, HTML5 Canvas API
    - Deployment: Frontend on Vercel, Backend on Render
-   - 🔗 Live Demo: https://lnkd.in/dwJGb8An
-   - 💻 GitHub: https://lnkd.in/dGg4ieYh
+   - 🔗 Live Demo:"https://skribbl-io-clone-px77.vercel.app/",
+   - 💻 GitHub: https://github.com/Vijendraenng/skribbl.io-clone"
 
 2. Prescripto — Doctor Appointment System
    - Features: Razorpay payment, JWT Authentication, Cloudinary media upload
